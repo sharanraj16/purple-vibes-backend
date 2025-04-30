@@ -62,7 +62,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['8000-sharanraj16-purplevibes-rsmevu7zbio.ws-eu118.gitpod.io','purple-vibes-backend.herokuapp.com','localhost']
+ALLOWED_HOSTS = ['8000-sharanraj16-purplevibes-rsmevu7zbio.ws-eu118.gitpod.io','https://purple-vibes-backend-1acc8e595a6f.herokuapp.com/','localhost']
 
 
 # Application definition
