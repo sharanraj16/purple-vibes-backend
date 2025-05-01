@@ -23,6 +23,8 @@ CLOUDINARY_STORAGE = {
 MEDIA_URL = '/media/'
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
+
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -60,12 +62,14 @@ REST_AUTH_SERIALIZERS = {
 
 SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = False 
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1','https://purple-vibes-backend-1acc8e595a6f.herokuapp.com/','*']
+
 CSRF_TRUSTED_ORIGINS = [
    'https://8000-sharanraj16-purplevibes-rsmevu7zbio.ws-eu118.gitpod.io','https://purple-vibes-backend-1acc8e595a6f.herokuapp.com'
 ]
+
 
 # Application definition
 
