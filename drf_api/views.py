@@ -13,7 +13,11 @@ def root_route(request):
         "message": "Welcome to purple vibes API!"
     })
 
-    @api_view(['POST'])
+
+
+
+    # dj-rest-auth logout view fix
+@api_view(['POST'])
 def logout_route(request):
     response = Response()
     response.set_cookie(
@@ -35,3 +39,6 @@ def logout_route(request):
         secure=JWT_AUTH_SECURE,
     )
     return response
+    
+
+ 
