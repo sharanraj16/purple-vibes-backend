@@ -10,7 +10,7 @@ class PostSerializer(serializers.ModelSerializer):
     like_id = serializers.SerializerMethodField()
     likes_count = serializers.ReadOnlyField()
     comments_count = serializers.ReadOnlyField()
-    image = serializers.ReadOnlyField(source='image.url')  # ✅ This ensures full URL from Cloudinary
+    image = serializers.ImageField()  # ✅ Allow image upload
 
     def get_is_owner(self, obj):
         request = self.context['request']
