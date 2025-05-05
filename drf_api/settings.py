@@ -64,7 +64,7 @@ REST_AUTH_SERIALIZERS = {
 
 SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True 
+DEBUG = False
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1','https://purple-vibes-backend-1acc8e595a6f.herokuapp.com/','*']
 
