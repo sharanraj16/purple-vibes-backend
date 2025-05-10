@@ -1,257 +1,193 @@
 
-# **Purple Vibes Backend API**
+# 💜 **Purple Vibes Backend API**
 
-## 🧪 Testing
+### 🧪 Testing Documentation
 
-### 📚 Table of Contents
+---
 
-* [Code Validation](#code-validation)
-* [Automated Testing](#automated-testing)
-* [Manual Testing](#manual-testing)
-* [Known Issues](#known-issues)
+## 📑 Table of Contents
+
+* [✅ Code Validation](#-code-validation)
+* [🤖 Automated Testing](#-automated-testing)
+* [🧍 Manual Testing](#-manual-testing)
+* [🐞 Known Bugs](#-known-bugs)
 
 ---
 
 ## ✅ Code Validation
 
-Code validation was performed using **PEP8** standards. The `pycodestyle` linter was configured in GitPod using the following steps:
+All Python files in the Purple Vibes API have been linted for PEP8 compliance using `pycodestyle`.
 
-1. Install pycodestyle:
+### 🔧 Setup Instructions
 
-   ```bash
-   pip3 install pycodestyle
-   ```
-2. Open the Command Palette (`Ctrl+Shift+P`).
-3. Search for `Python: Select Linter` and choose `pycodestyle`.
-4. Navigate to `View` → `Problems` to see linting results.
+```bash
+pip3 install pycodestyle
+```
 
-All Python files across the project passed without warnings or errors.
+Steps to configure linter in GitPod:
 
-### Breakdown by App:
+1. Press `Ctrl + Shift + P`
+2. Search and select **Python: Select Linter**
+3. Choose **pycodestyle**
+4. Go to the top-left menu → `View` → `Problems` to see lint results
 
-<details>
-<summary><strong>Events API</strong></summary>
+---
 
-* ✅ `permissions.py`
-* ✅ `serializers.py`
-* ✅ `views.py`
-* ✅ `models.py`
-* ✅ `urls.py`
+### 🗂️ Validation Results
 
-</details>
+**All files passed with 0 errors or warnings.**
 
-<details>
-<summary><strong>Comments</strong></summary>
+#### 📁 Posts App
 
-* ✅ `models.py`
-* ✅ `serializers.py`
-* ✅ `tests.py`
-* ✅ `urls.py`
-* ✅ `views.py`
+* `models.py`
+* `serializers.py`
+* `tests.py`
+* `urls.py`
+* `views.py`
 
-</details>
+#### 📁 Comments App
 
-<details>
-<summary><strong>Contact</strong></summary>
+* `models.py`
+* `serializers.py`
+* `tests.py`
+* `urls.py`
+* `views.py`
 
-* ✅ `models.py`
-* ✅ `serializers.py`
-* ✅ `tests.py`
-* ✅ `urls.py`
-* ✅ `views.py`
+#### 📁 Profiles App
 
-</details>
+* `models.py`
+* `serializers.py`
+* `tests.py`
+* `urls.py`
+* `views.py`
 
-<details>
-<summary><strong>Events</strong></summary>
+#### 📁 Followers App
 
-* ✅ `models.py`
-* ✅ `serializers.py`
-* ✅ `tests.py`
-* ✅ `urls.py`
-* ✅ `views.py`
+* `models.py`
+* `serializers.py`
+* `tests.py`
+* `urls.py`
+* `views.py`
 
-</details>
+#### 📁 Likes App
 
-<details>
-<summary><strong>Followers</strong></summary>
-
-* ✅ `models.py`
-* ✅ `serializers.py`
-* ✅ `tests.py`
-* ✅ `urls.py`
-* ✅ `views.py`
-
-</details>
-
-<details>
-<summary><strong>Going</strong></summary>
-
-* ✅ `models.py`
-* ✅ `serializers.py`
-* ✅ `tests.py`
-* ✅ `urls.py`
-* ✅ `views.py`
-
-</details>
-
-<details>
-<summary><strong>Interested</strong></summary>
-
-* ✅ `models.py`
-* ✅ `serializers.py`
-* ✅ `tests.py`
-* ✅ `urls.py`
-* ✅ `views.py`
-
-</details>
-
-<details>
-<summary><strong>Profiles</strong></summary>
-
-* ✅ `models.py`
-* ✅ `serializers.py`
-* ✅ `tests.py`
-* ✅ `urls.py`
-* ✅ `views.py`
-
-</details>
-
-<details>
-<summary><strong>Reviews</strong></summary>
-
-* ✅ `models.py`
-* ✅ `serializers.py`
-* ✅ `tests.py`
-* ✅ `urls.py`
-* ✅ `views.py`
-
-</details>
+* `models.py`
+* `serializers.py`
+* `tests.py`
+* `urls.py`
+* `views.py`
 
 ---
 
 ## 🤖 Automated Testing
 
-Each app includes unit and integration tests written using Django’s built-in test framework. Below is a summary of tested functionalities:
-
-![Automated Test Summary](images/test-summary.png)
-
-<details>
-<summary><strong>Profiles</strong></summary>
-
-| Status | Test                                  |
-| :----: | ------------------------------------- |
-|    ✅   | Auto-creation on user registration    |
-|    ✅   | Profile listing & retrieval           |
-|    ✅   | Restrict unauthorized updates/deletes |
-
-</details>
-
-<details>
-<summary><strong>Events</strong></summary>
-
-| Status | Test                                 |
-| :----: | ------------------------------------ |
-|    ✅   | Event CRUD operations                |
-|    ✅   | Permissions respected for creators   |
-|    ✅   | Handles valid/invalid IDs gracefully |
-
-</details>
-
-<details>
-<summary><strong>Interested</strong></summary>
-
-| Status | Test                             |
-| :----: | -------------------------------- |
-|    ✅   | CRUD operations & access control |
-|    ✅   | Prevents duplicate interests     |
-
-</details>
-
-<details>
-<summary><strong>Going</strong></summary>
-
-| Status | Test                             |
-| :----: | -------------------------------- |
-|    ✅   | CRUD operations & validation     |
-|    ✅   | Prevents duplicate going records |
-
-</details>
-
-<details>
-<summary><strong>Comments</strong></summary>
-
-| Status | Test                             |
-| :----: | -------------------------------- |
-|    ✅   | Comment creation, update, delete |
-|    ✅   | Proper permission enforcement    |
-
-</details>
-
-<details>
-<summary><strong>Reviews</strong></summary>
-
-| Status | Test                                     |
-| :----: | ---------------------------------------- |
-|    ✅   | Review creation & rating logic           |
-|    ✅   | Prevents multiple reviews per user/event |
-
-</details>
-
-<details>
-<summary><strong>Followers</strong></summary>
-
-| Status | Test                       |
-| :----: | -------------------------- |
-|    ✅   | Follower logic verified    |
-|    ✅   | Prevents duplicate follows |
-
-</details>
-
-<details>
-<summary><strong>Contact</strong></summary>
-
-| Status | Test                                                    |
-| :----: | ------------------------------------------------------- |
-|    ❌   | Contact creation test (logged-in) not implemented fully |
-|    ✅   | Permissions now prevent contact creation by guests      |
-
-</details>
+Each core feature has a comprehensive set of automated tests. Here's a breakdown of what's covered:
 
 ---
 
-## 🧪 Manual Testing
+### 👤 **Profiles**
 
-Manual API endpoint testing was conducted using **Postman** and **Django Admin**, validating filtering, ordering, and permission logic beyond unit tests.
-
-### Highlights:
-
-* ✅ Ordering & filtering for profiles based on followers, events, going/interested counts, etc.
-* ✅ Advanced event search: by tags, category, dates, title, owner
-* ✅ Filter relationships (e.g., following/followed, interested/going events)
-* ✅ Searchable events using nested fields like `owner__username`
+| Test                                       | Status |
+| ------------------------------------------ | ------ |
+| Auto-create profile on user sign-up        | ✅      |
+| List, retrieve, update, delete own profile | ✅      |
+| Restrict actions on other users' profiles  | ✅      |
 
 ---
 
-## 🐞 Known Issues
+### 📝 **Posts**
 
-### ✅ Resolved Bugs
-
-1. **Taggit Integration Conflict**
-   Despite using `blank=True`, tags remained a required field. Adjusted event creation tests to include the required tag field to resolve test failures.
-
-2. **Followers Test Failure**
-   Test failures traced back to a missing trailing slash in the profile list URL. Updating the route in `urls.py` fixed the issue.
-
-3. **Contact App Test Behavior**
-   Automatic test for contact creation failed due to incorrect permission settings. Initially believed to be a test error, but was later corrected by enforcing `IsAuthenticated` in the view permissions. Now functions as expected.
-
-![Contact Test Fail](images/fail_create_contact_test.png)
+| Test                           | Status |
+| ------------------------------ | ------ |
+| Create post (logged-in only)   | ✅      |
+| List and retrieve posts        | ✅      |
+| Update/delete own post only    | ✅      |
+| Restrict editing others' posts | ✅      |
 
 ---
 
-🔙 [Back to README](README.md)
+### 💬 **Comments**
+
+| Test                              | Status |
+| --------------------------------- | ------ |
+| Add comment (logged-in only)      | ✅      |
+| List/retrieve comments            | ✅      |
+| Edit/delete own comment           | ✅      |
+| Restrict editing others' comments | ✅      |
 
 ---
 
+### ❤️ **Likes**
+
+| Test                         | Status |
+| ---------------------------- | ------ |
+| Like a post (logged-in only) | ✅      |
+| View list of likes           | ✅      |
+| Prevent duplicate likes      | ✅      |
+| Delete own like              | ✅      |
+
+---
+
+### 👥 **Followers**
+
+| Test                              | Status |
+| --------------------------------- | ------ |
+| Follow/unfollow a profile         | ✅      |
+| View list of followers/following  | ✅      |
+| Prevent duplicate follows         | ✅      |
+| Restrict deleting others’ follows | ✅      |
+
+---
+
+## 🧍 Manual Testing
+
+In addition to automated tests, thorough manual testing was performed using the live API endpoints and admin dashboard.
+
+---
+
+### 👤 **Profiles**
+
+| Feature                                       | Status |
+| --------------------------------------------- | ------ |
+| Order by followers/following count (asc/desc) | ✅      |
+| Filter by following/followed relationships    | ✅      |
+
+---
+
+### 📝 **Posts**
+
+| Feature                                 | Status |
+| --------------------------------------- | ------ |
+| Order by like/comment count (asc/desc)  | ✅      |
+| Search by title or owner                | ✅      |
+| Filter by followed users or liked posts | ✅      |
+
+---
+
+### 💬 **Comments**
+
+| Feature                 | Status |
+| ----------------------- | ------ |
+| Filter comments by post | ✅      |
+
+---
+
+## 🐞 Known Bugs
+
+### ✅ Resolved Issues
+
+1. **Tag Field Required**
+   Taggit field incorrectly marked as required despite `blank=True`. Tests were updated to include tags, resolving the issue.
+
+2. **Followers List URL**
+   Test failed due to missing `/` in endpoint. Adding the trailing slash fixed the issue.
+
+3. **Permission Misconfiguration**
+   Discovered logged-out users could like/comment due to incorrect permissions. Adjusted `permissions.py`; tests now pass as expected.
+
+---
+
+## 🔙 [Return to README](README.md)
+
+---
 
