@@ -49,9 +49,13 @@ Development followed an **Agile** workflow to promote:
 * Iterative development
 * Visibility through regular updates and reviews
 
-📌 **Project board** available [here](https://github.com/users/ozi-cheri/projects/) for tracking epics, issues, and progress.
 
----
+![Purple Vibes UI](images/5.png)
+
+![Purple Vibes UI](images/6.png)
+
+![Purple Vibes UI](images/7.png)
+📌
 
 ## 🧠 Wireframes
 

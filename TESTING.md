@@ -45,6 +45,9 @@ Steps to configure linter in GitPod:
 * `urls.py`
 * `views.py`
 
+![Purple Vibes UI](images/8.png)
+
+![Purple Vibes UI](images/9.png)
 #### 📁 Comments App
 
 * `models.py`
