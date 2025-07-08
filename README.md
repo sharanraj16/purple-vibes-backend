@@ -9,7 +9,7 @@ The **Purple Vibes API** is a robust RESTful API built using **Django** and the 
 Access the deployed API here:
 👉 **[https://purple-vibes-backend-1acc8e595a6f.herokuapp.com/](https://purple-vibes-backend-1acc8e595a6f.herokuapp.com/)**
 
-> 📝 **Note**: This README is for the back-end API only. For front-end documentation, visit the [Purple Vibes Front-End Repo](https://github.com/ozi-cheri/voyage).
+> 📝 **Note**: This README is for the back-end API only. For front-end documentation, visit the [Purple Vibes Front-End Repo](https://github.com/sharanraj16/purple-vibes-frontend).
 
 ---
 
