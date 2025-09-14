@@ -10,7 +10,7 @@ class PostSerializer(serializers.ModelSerializer):
     like_id = serializers.SerializerMethodField()
     likes_count = serializers.ReadOnlyField()
     comments_count = serializers.ReadOnlyField()
-    image = serializers.ImageField()  # ✅ Allow image upload
+    image = serializers.ImageField(required=False, allow_null=True)  # ✅ Now optional
 
     def get_is_owner(self, obj):
         request = self.context['request']
