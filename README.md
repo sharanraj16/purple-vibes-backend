@@ -259,6 +259,151 @@ CLOUDINARY_URL=cloudinary://api_key:api_secret@cloud_name
 SECRET_KEY=sk_@1k2!v$%2abcd3fghij4klmnop5qrstuv
 DISABLE_COLLECTSTATIC=1
 ```
+🚀 Deployment Guide
+
+This section explains the deployment process for the Purple Vibes Frontend and Backend API, including cloning repositories, pushing code to GitHub, and deploying both apps to Heroku.
+
+🔹 Cloning the Repositories from GitHub
+
+To work locally on the project, start by cloning the repositories:
+
+Frontend repo:
+
+git clone https://github.com/sharanraj16/purple-vibes-frontend.git
+
+Backend repo:
+
+git clone https://github.com/sharanraj16/purple-vibes-backend.git
+
+🔹 Pushing Frontend and Backend to GitHub
+
+Step 1: Initialize Git (if not already done):
+
+git init
+
+Step 2: Stage all changes:
+
+git add .
+
+Step 3: Commit your changes:
+
+git commit -m "Initial commit for Purple Vibes"
+
+Step 4: Create repositories on GitHub:
+
+Frontend repo: purple-vibes-frontend
+
+Backend repo: purple-vibes-backend
+
+Create new repositories at 👉 https://github.com/new .
+
+Step 5: Link local projects to GitHub repos (replace username with yours):
+
+Frontend:
+
+git remote add origin https://github.com//purple-vibes-frontend.git git push -u origin main
+
+Backend:
+
+git remote add origin https://github.com//purple-vibes-backend.git git push -u origin main
+
+🔹 Deploying Backend API to Heroku (Django)
+
+Step 1: Log in to Heroku CLI
+
+heroku login
+
+Step 2: Create a new Heroku app
+
+heroku create purple-vibes-backend
+
+Step 3: Connect GitHub repo to Heroku
+
+Go to Heroku Dashboard → Deploy tab.
+
+Choose GitHub → Connect to your purple-vibes-backend repo.
+
+Enable Automatic Deploys from main.
+
+Step 4: Configure environment variables (Heroku → Settings → Config Vars):
+
+SECRET_KEY = your-django-secret-key
+
+DEBUG = False
+
+ALLOWED_HOSTS = purple-vibes-backend.herokuapp.com
+
+CLOUDINARY_URL = your-cloudinary-api-url
+
+Step 5: Run migrations and collect static files
+
+heroku run python manage.py migrate -a purple-vibes-backend heroku run python manage.py collectstatic --noinput -a purple-vibes-backend
+
+✅ backend is now live at: 👉 https://purple-vibes-backend.herokuapp.com/
+
+🔹 Deploying Frontend to Heroku (React)
+
+Step 1: Prepare frontend for Heroku In your frontend project, install a static server:
+
+npm install serve
+
+Update package.json scripts:
+
+"scripts": { "start": "serve -s build", "build": "react-scripts build" }
+
+Create a Procfile in the frontend root:
+
+web: npm run start
+
+Step 2: Push frontend code to GitHub
+
+git add . git commit -m "Frontend ready for deployment" git push origin main
+
+Step 3: Deploy frontend via Heroku GitHub integration
+
+Create a new Heroku app: purple-vibes-frontend
+
+Go to Heroku Dashboard → Deploy tab
+
+Connect GitHub repo purple-vibes-frontend
+
+Enable Automatic Deploys from main
+
+✅  frontend is now live at: 👉 https://purple-vibes-frontend.herokuapp.com/
+
+🔹 Connecting Frontend to Backend
+
+To make API calls from the frontend, set your backend base URL in React:
+
+In .env (frontend project):
+
+REACT_APP_API_URL=https://purple-vibes-backend.herokuapp.com/
+
+Use it in your code:
+
+const apiUrl = process.env.REACT_APP_API_URL;
+
+🎯 Final Setup
+
+Backend API → https://purple-vibes-backend.herokuapp.com/
+
+Frontend App → https://purple-vibes-frontend.herokuapp.com/
+
+Improvements and Issue Resolutions
+This project has undergone a thorough review and improvement process based on detailed feedback received during the initial assessment. I am pleased to confirm that all issues previously marked as "No" have been fully addressed and rectified in the current version of the project. The key enhancements include:
+
+Improved Post Editing Experience:
+The post editing functionality has been improved so that users no longer need to re-upload images if no changes are made. Existing images are preloaded and persist unless explicitly updated by the user.
+
+Detailed Deployment Instructions:
+The deployment documentation now contains comprehensive, step-by-step instructions for setting up, configuring, and deploying both the front-end React application and the back-end Django REST API on Heroku, including repository cloning and environment configuration.
+
+Design Documentation Added:
+Wireframes, mockups, and design rationale have been added, outlining the user experience improvements and front-end architecture.
+
+Custom Backend Models:
+All core backend models (Post, Profile, Comment, Follower, Like) have been updated with small, safe enhancements that provide scope for future customization. Examples include snippet previews, status checks, convenience methods, and helper functions that make the backend more maintainable and extendable without affecting frontend functionality.
+
 
 
 ---
